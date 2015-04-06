@@ -16,7 +16,7 @@ ember install:addon ui-icon
 
 For more details on the syntax check out the interactive demo:
 
-![ ](/var/folders/zb/65z13rv940v04234jn3dx0140000gn/T/com.TechSmith.Snagit/2015-04-06_10-13-16.png)
+![ ](vendor/ui-icon/screenshot.png)
 
 > [ui-icon demo](http://current.development.ui-icon.divshot.io)
 > 
