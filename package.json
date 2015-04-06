@@ -11,7 +11,7 @@
     "build": "ember build",
     "test": "ember test"
   },
-  "repository": "git@github.com:lifegadget/ui-button.git",
+  "repository": "git@github.com:lifegadget/ui-icon.git",
   "engines": {
     "node": ">= 0.10.0"
   },
