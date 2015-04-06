@@ -24,6 +24,9 @@ For more details on the syntax check out the interactive demo:
 
 ## Dependencies ##
 
+- FontAwesome - this is the fountain of icon-awesomeness
+- Annimate.css - a great set of libraries 
+
 FontAwesome is the sole dependency for this repo to work but it was designed to play nicely with Twitter's Bootstrap as well.
 
 ## Version Compatibility
