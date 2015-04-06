@@ -25,8 +25,8 @@ export default Ember.Component.extend({
         let height = this.$().height();
         this.set('_styleWidth', height + 'px');
         this.set('_styleBorderRadius', '50%');
-        this.set('_styleTextAlign', 'center')  
-      })
+        this.set('_styleTextAlign', 'center'); 
+      });
     }
   }),
   size: null, // set by container

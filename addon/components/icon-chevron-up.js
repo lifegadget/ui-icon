@@ -1,4 +1,4 @@
-import Ember from 'ember';
+// import Ember from 'ember';
 import layout from '../templates/components/icon-facebook';
 import UiIcon from 'ui-icon/components/ui-icon';
 
