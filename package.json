@@ -1,6 +1,6 @@
 {
   "name": "ui-icon",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Add fontawesome icons to your document.",
   "directories": {
     "doc": "doc",
