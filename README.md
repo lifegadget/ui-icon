@@ -11,15 +11,16 @@ ember install:addon ui-icon
 
 
 ````hbs
-  {{ui-icon icon='smile-o'}}
+  Full Syntax
+  {{ui-icon icon='facebook-square'}}
+  
+  Shortened Syntax
+  {{icon-facebook}}
 ````
 
 For more details on the syntax check out the interactive demo:
 
-![ ](vendor/ui-icon/screenshot.png)
-
 > [ui-icon demo](http://current.development.ui-icon.divshot.io)
-> 
 
 ## Dependencies ##
 
