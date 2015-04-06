@@ -1,6 +1,5 @@
-# ui-icon
+# ui-icon ![ ](https://travis-ci.org/lifegadget/ui-icon.svg)
 > FontAwesome icons with Ember flare
-
 
 ## Install ##
 
@@ -20,6 +19,7 @@ For more details on the syntax check out the interactive demo:
 ![ ](/var/folders/zb/65z13rv940v04234jn3dx0140000gn/T/com.TechSmith.Snagit/2015-04-06_10-13-16.png)
 
 > [ui-icon demo](http://current.development.ui-icon.divshot.io)
+> 
 
 ## Dependencies ##
 
