@@ -7,7 +7,7 @@
 ember install ui-icon
 ````
 
-> Note: this *will* install both FontAwesome and Animate.css (see dependencies section) but you can configure how much you use them (including not at all)
+> Note: this *will* install both [FontAwesome](http://fortawesome.github.io/Font-Awesome/) and [Animate.css](http://daneden.github.io/animate.css/) (see dependencies section) but you can configure how much you use them (including not at all)
 
 ## Usage ##
 
@@ -29,12 +29,12 @@ For more details on the syntax check out the interactive demo:
 
 ## Configuration ##
 
-By default this addon will add all the font and CSS requirements for **font-awesome** and it will minimally add the "attention-getters" from **animate.css**. You might say, "hey that's perfect" and of course that's what we *thought* you'd say so that is our default. You may, you reckless sailor, go whatever path you choose ...
+By default this addon will add all the font and CSS requirements for [**font-awesome**](http://fortawesome.github.io/Font-Awesome/) and it will minimally add the "attention-getters" CSS from [**animate.css**](http://daneden.github.io/animate.css/). You might say, "hey that's perfect" and of course that's what we *thought* you'd say so that is our default. You may, however, go whatever path you choose ... you reckless sailor.
 
 
 ### FontAwesome ###
 
-If you've already loaded the CSS/Fonts for FontAwesome and you'd like us to stay out of that business modify your `Brocfile` like so:
+If you've already loaded the CSS/Fonts for FontAwesome and you'd like us to stay out of that business, modify your `Brocfile` like so:
 
 ```javascript
 // in your path/to/app/Brocfile.js
