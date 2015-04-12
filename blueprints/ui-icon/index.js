@@ -10,7 +10,7 @@ module.exports = {
 	afterInstall: function() {
     return this.addBowerPackagesToProject([
       { name: 'fontawesome', target: '4.3.0' },
-      { name: 'animate.css', target: '3.2.5' }
+      { name: 'animate.css', target: '3.2.6' }
     ]);
 	}
 };
