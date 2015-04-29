@@ -22,7 +22,7 @@ ember install ui-icon
 
 For more details on the syntax check out the interactive demo:
 
-> [ui-icon demo](http://current.development.ui-icon.divshot.io)
+> [ui-icon demo](http://development.ui-icon.divshot.io)
 
 
 
