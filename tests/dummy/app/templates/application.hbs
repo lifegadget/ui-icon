@@ -147,6 +147,18 @@
     </div>
     <div class="row">
         <div class="col-xs-2">
+            {{icon-add}}
+            {{icon-remove}}
+            {{icon-delete}}
+        </div>
+        <div class="snippet col-xs-10">
+            \{{icon-add}}
+            \{{icon-remove}}
+            \{{icon-delete}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-2">
             {{icon-star}}
             {{icon-half-star}}
             {{icon-empty-star}}
@@ -231,6 +243,31 @@
         </p>        
     </div>
     
+    <div class="row">
+        <div class="col-xs-1">
+            {{ui-icon icon='smile-o' size='lg'}} {{ui-icon icon='smile-o' muted=true size='lg'}}
+        </div>
+        <div class="snippet col-xs-11">
+            \{{ui-icon icon='smile-o' <strong>muted=true</strong> size='lg'}} - muting drops opacity to give a muted look
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-1">
+            {{ui-icon icon='smile-o' size='lg' cursor=true}} {{ui-icon icon='smile-o' muted=true size='lg' cursor=true}}
+        </div>
+        <div class="snippet col-xs-11">
+            \{{ui-icon icon='smile-o' <strong>cursor=true</strong> size='lg'}} - setting the cursor effects <em>cursor</em> and <em>hover</em>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-1">
+            {{ui-icon icon='smile-o' size='lg' muted=true color='purple' cursor=true}} {{ui-icon icon='smile-o' muted=true color='green' size='lg' cursor=true}}
+        </div>
+        <div class="snippet col-xs-11">
+            \{{ui-icon icon='smile-o' size='lg' muted=true color='purple' cursor=true}} <br/>
+            muted and cursor effect <em>opacity</em> not <em>color</em>, setting colors explicitly does not interfere with "muted" or "cursor" effects
+        </div>
+    </div>
     <div class="row">
         <div class="col-xs-1">
             {{ui-icon icon='smile-o' color='red' size='3x'}}

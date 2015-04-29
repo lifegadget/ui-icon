@@ -5,7 +5,7 @@ export default Ember.Component.extend({
   layout: layout,
   tagName: 'i',
   classNames: ['ui-icon'],
-  classNameBindings: ['fontFamily','_fw', '_icon', '_classSize', 'spin:fa-spin', 'pulse:fa-pulse', 'border:fa-border'],
+  classNameBindings: ['fontFamily','_fw', '_icon', '_classSize', 'spin:fa-spin', 'pulse:fa-pulse', 'border:fa-border', 'muted', 'cursor'],
   attributeBindings: ['_style:style'],
   fontFamily: 'fa',
   fw: true,

@@ -27,3 +27,21 @@
 .ui-icon.scale-10x {
     font-size: 10em;
 }
+
+// default hover effects
+.ui-icon.cursor {
+    opacity: .9;
+}
+.ui-icon.cursor {
+    cursor: pointer;
+}
+.ui-icon.muted {
+/*    color: #9d9d9d;*/
+    opacity: .5;
+}
+.ui-icon.cursor:hover {
+    color: #000;
+    opacity: 1;
+    transition-duration: .25s;
+    transition-property: color, opacity;
+}
