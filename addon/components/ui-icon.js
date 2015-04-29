@@ -5,10 +5,15 @@ export default Ember.Component.extend({
   layout: layout,
   tagName: 'i',
   classNames: ['ui-icon'],
-  classNameBindings: ['fontFamily','fixedWidth', '_icon', '_classSize', 'spin:fa-spin', 'pulse:fa-pulse', 'border:fa-border'],
+  classNameBindings: ['fontFamily','_fw', '_icon', '_classSize', 'spin:fa-spin', 'pulse:fa-pulse', 'border:fa-border'],
   attributeBindings: ['_style:style'],
   fontFamily: 'fa',
-  fixedWidth: false,
+  fw: true,
+  _fw: Ember.on('init', Ember.computed('fw', function() {
+    let fw = this.get('fw');
+    let fontFamily = this.get('fontFamily');
+    return fw ? `${fontFamily}-fw` : null;    
+  })), 
   icon: null,
   _icon: Ember.computed('icon', function() {
     let family = this.get('fontFamily');
@@ -38,6 +43,8 @@ export default Ember.Component.extend({
     let size = String(this.get('size'));
     if(size.substr(-2) === 'pt' || size.substr(-2) === 'em' || size.substr(-1) === '%') {
       this.set('_styleFontSize',size);
+    } else if (size && size === 'lg') {
+      this.set('_classSize', 'fa-lg');
     } else if (size && size.substr(-1) === 'x') {
       // fontsize multiplier
       let factor = size.substr(0,size.length - 1);
