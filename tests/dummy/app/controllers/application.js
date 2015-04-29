@@ -13,6 +13,9 @@ export default Ember.Controller.extend({
     toggleEnablement: function() {
       console.log('toggling');
       this.toggleProperty('toggledEnablement');
+    },
+    iconActionable: function(item) {
+      window.alert('Icon clicked: ' + JSON.stringify(item));
     }
   }
 

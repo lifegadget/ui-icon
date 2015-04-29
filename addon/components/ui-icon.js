@@ -1,7 +1,8 @@
 import Ember from 'ember';
 import layout from '../templates/components/ui-icon';
+const { $, A, Component, computed, observer, run } = Ember;
 
-export default Ember.Component.extend({
+export default Component.extend({
   layout: layout,
   tagName: 'i',
   classNames: ['ui-icon'],
@@ -9,13 +10,13 @@ export default Ember.Component.extend({
   attributeBindings: ['_style:style'],
   fontFamily: 'fa',
   fw: true,
-  _fw: Ember.on('init', Ember.computed('fw', function() {
+  _fw: Ember.on('init', computed('fw', function() {
     let fw = this.get('fw');
     let fontFamily = this.get('fontFamily');
     return fw ? `${fontFamily}-fw` : null;    
   })), 
   icon: null,
-  _icon: Ember.computed('icon', function() {
+  _icon: computed('icon', function() {
     let family = this.get('fontFamily');
     let icon = this.get('icon');
     return icon ? `${family}-${icon}` : null;
@@ -23,10 +24,10 @@ export default Ember.Component.extend({
   color: null,
   border: false,
   circular: false,
-  _circular: Ember.observer('circular', function() {
+  _circular: observer('circular', function() {
     let circular = this.get('circular');
     if(circular) {
-      Ember.run.next( ()=> {
+      run.next( ()=> {
         let height = this.$().height();
         this.set('_styleWidth', height + 'px');
         this.set('_styleBorderRadius', '50%');
@@ -39,7 +40,7 @@ export default Ember.Component.extend({
   _styleFontSize: null,
   _styleBorderRadius: null,
   _styleWidth: null,
-  _sizeObserver: Ember.observer('size', function() {
+  _sizeObserver: observer('size', function() {
     let size = String(this.get('size'));
     if(size.substr(-2) === 'pt' || size.substr(-2) === 'em' || size.substr(-1) === '%') {
       this.set('_styleFontSize',size);
@@ -56,9 +57,18 @@ export default Ember.Component.extend({
       }
     } // end scale factor
   }),
+  value: null, // values are passed by an action 
+  _value: computed('value', 'elementId', function() {
+    let { value, elementId } = this.getProperties('value','elementId');
+    return value ? value : elementId;
+  }),
+  click: function(evt) {
+    let value = this.get('_value');
+    this.sendAction('action', value); // general action
+  }, 
   
   tooltip: false,
-  tooltipPlacement: 'auto top',
+  tooltipPlacement: 'top',
   tooltipDelay: 500,
   tooltipHtml: true,
   tooltipTrigger: 'hover',

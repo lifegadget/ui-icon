@@ -342,5 +342,31 @@
             \{{icon-comments tooltip='hello lefty' tooltipPlacement='left' size='3x'}}
         </div>
     </div>
+    
+    <h3>Actions</h3>
+    <div class="row">
+        <p class="descriptive col-xs-12 col-sm-10 col-lg-8">
+            You can pick up actions on icon clicks, etc. and react to them as you like. 
+            The action function will receive a single parameter with either value property 
+            of the icon (if set) or fall back to the <strong>elementId</strong> if not.
+        </p>        
+    </div>
+    
+    <div class="row">
+        <div class="col-xs-1">
+            {{icon-info cursor=true muted=true size='3x' action='iconActionable'}}
+        </div>
+        <div class="snippet col-xs-11">
+            \{{icon-info cursor=true muted=true size='3x' action='iconActionable'}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-1">
+            {{icon-info value='foobar' cursor=true muted=true size='3x' action='iconActionable' }}
+        </div>
+        <div class="snippet col-xs-11">
+            \{{icon-info <strong>value='foobar'</strong> cursor=true muted=true size='3x' action='iconActionable' }}
+        </div>
+    </div>
 
 </div>
