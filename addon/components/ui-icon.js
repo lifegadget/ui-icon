@@ -60,7 +60,7 @@ export default Component.extend({
   value: null, // values are passed by an action 
   _value: computed('value', 'elementId', function() {
     let { value, elementId } = this.getProperties('value','elementId');
-    return value ? value : elementId;
+    return value !== null ? value : elementId;
   }),
   click: function(evt) {
     let value = this.get('_value');
