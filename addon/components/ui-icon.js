@@ -62,7 +62,7 @@ export default Component.extend({
     let { value, elementId } = this.getProperties('value','elementId');
     return value !== null ? value : elementId;
   }),
-  click: function(evt) {
+  click: function() {
     let value = this.get('_value');
     this.sendAction('action', value); // general action
   }, 
