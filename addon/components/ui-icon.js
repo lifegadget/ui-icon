@@ -1,6 +1,6 @@
 import Ember from 'ember';
 import layout from '../templates/components/ui-icon';
-const { $, A, Component, computed, observer, run } = Ember;
+const { Component, computed, observer, run } = Ember;
 
 export default Component.extend({
   layout: layout,
