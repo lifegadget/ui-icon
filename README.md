@@ -1,4 +1,4 @@
-# ui-icon ![ ](https://travis-ci.org/lifegadget/ui-icon.svg)
+# [ui-icon](https://github.com/lifegadget/ui-icon) ![ ](https://travis-ci.org/lifegadget/ui-icon.svg) [![npm version](https://badge.fury.io/js/ui-icon.svg)](http://badge.fury.io/js/ui-icon)
 > FontAwesome icons with Ember flare
 
 ## Install ##
