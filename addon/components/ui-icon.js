@@ -37,7 +37,7 @@ export default Component.extend({
         this.set('_styleWidth', height + padded + 'px');
         this.set('_styleHeight', height + padded + 'px');
         this.set('_stylePadTop', padded/2 + 'px');
-        this.set('_stylePadLeft', (padded/2)*(2/3) + 'px');
+        this.set('_stylePadLeft', (padded/2)*(1/3) + 'px');
         this.set('_styleBorderRadius', '50%');
         this.set('_styleTextAlign', 'center');
       });
