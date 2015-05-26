@@ -1,14 +1,14 @@
 <div class="container">
-    <h1 id="title">ui-icon</h1>
+    <h1 id="title"><a href='https://github.com/lifegadget/ui-icon' target='_new'>ui-icon</a></h1>
     <h2>FontAwesome icons with Ember flare</h2>
-    
+
     <h3>Basics</h3>
     <div class="row">
         <p class="descriptive col-xs-12 col-sm-8 col-lg-6">
             The basic syntax
-        </p>        
+        </p>
     </div>
-    
+
     <div class="row">
         <div class="col-xs-1">
             {{ui-icon icon='smile-o'}}
@@ -16,8 +16,8 @@
             {{ui-icon icon='frown-o'}}
         </div>
         <div class="snippet col-xs-11">
-            \{{ui-icon icon='smile-o'}} 
-            \{{ui-icon icon='meh-o'}} 
+            \{{ui-icon icon='smile-o'}}
+            \{{ui-icon icon='meh-o'}}
             \{{ui-icon icon='frown-o'}}
         </div>
     </div>
@@ -25,10 +25,10 @@
     <h3>Shortcuts</h3>
     <div class="row">
         <p class="descriptive col-xs-12 col-sm-8 col-lg-6">
-            A shortened syntax for common icons ... 
-        </p>        
+            A shortened syntax for common icons ...
+        </p>
     </div>
-    
+
     <div class="row">
         <div class="col-xs-2">
             {{icon-facebook}}
@@ -36,8 +36,8 @@
             {{icon-google-plus}}
         </div>
         <div class="snippet col-xs-10">
-            \{{icon-facebook}} 
-            \{{icon-twitter}} 
+            \{{icon-facebook}}
+            \{{icon-twitter}}
             \{{icon-google-plus}}
         </div>
     </div>
@@ -182,19 +182,19 @@
             \{{icon-cog}}
             \{{icon-spinner}}
             \{{icon-refresh}}
-            \{{icon-bars}}            
+            \{{icon-bars}}
         </div>
     </div>
-    
+
 
 
     <h3>Sizing</h3>
     <div class="row">
         <p class="descriptive col-xs-12 col-sm-8 col-lg-6">
-            You can set using explicit units (rem,em,pt) or using a multiplier (2x,3x, etc.). 
-        </p>        
+            You can set using explicit units (rem,em,pt) or using a multiplier (2x,3x, etc.).
+        </p>
     </div>
-    
+
     <div class="row">
         <div class="col-xs-1">
             {{ui-icon icon='smile-o'}}
@@ -240,9 +240,9 @@
     <div class="row">
         <p class="descriptive col-xs-12 col-sm-8 col-lg-6">
             There are a number of helpful ways you can style icons ... colors, spins, etc.
-        </p>        
+        </p>
     </div>
-    
+
     <div class="row">
         <div class="col-xs-1">
             {{ui-icon icon='smile-o' size='lg'}} {{ui-icon icon='smile-o' muted=true size='lg'}}
@@ -302,6 +302,27 @@
     </div>
     <div class="row">
         <div class="col-xs-1">
+            {{ui-icon icon='check-square-o' circular=true background='lightgrey' size='3x'}}
+        </div>
+        <div class="snippet col-xs-11">
+            \{{ui-icon icon='check-square-o' circular=true background='lightgrey' size='3x'}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-1">
+            {{ui-icon icon='check-square-o' circular=true padded=20 background='lightgrey' size='3x'}}
+        </div>
+        <div class="snippet col-xs-11">
+            \{{ui-icon icon='check-square-o' circular=true padded=20 background='lightgrey' size='3x'}}
+            <span class="comment">
+              <p>
+              <em>Padding</em> adds some room for square icons in a circular container. Setting to <em>true</em> adds 10px but you if you specify a numeric quantity that will be used instead.
+              </p>
+            </span>
+          </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-1">
             {{ui-icon icon='spinner' pulse=true size='3x'}}
         </div>
         <div class="snippet col-xs-11">
@@ -317,15 +338,15 @@
         </div>
     </div>
 
-    
+
 
     <h3>Tooltips</h3>
     <div class="row">
         <p class="descriptive col-xs-12 col-sm-8 col-lg-6">
-            You can set using explicit units (rem,em,pt) or using a multiplier (2x,3x, etc.). 
-        </p>        
+            You can set using explicit units (rem,em,pt) or using a multiplier (2x,3x, etc.).
+        </p>
     </div>
-    
+
     <div class="row">
         <div class="col-xs-1">
             {{icon-comments tooltip='hello world' size='3x'}}
@@ -342,16 +363,16 @@
             \{{icon-comments tooltip='hello lefty' tooltipPlacement='left' size='3x'}}
         </div>
     </div>
-    
+
     <h3>Actions</h3>
     <div class="row">
         <p class="descriptive col-xs-12 col-sm-10 col-lg-8">
-            You can pick up actions on icon clicks, etc. and react to them as you like. 
-            The action function will receive a single parameter with either value property 
+            You can pick up actions on icon clicks, etc. and react to them as you like.
+            The action function will receive a single parameter with either value property
             of the icon (if set) or fall back to the <strong>elementId</strong> if not.
-        </p>        
+        </p>
     </div>
-    
+
     <div class="row">
         <div class="col-xs-1">
             {{icon-info cursor=true muted=true size='3x' action='iconActionable'}}

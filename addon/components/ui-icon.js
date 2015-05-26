@@ -13,8 +13,8 @@ export default Component.extend({
   _fw: Ember.on('init', computed('fw', function() {
     let fw = this.get('fw');
     let fontFamily = this.get('fontFamily');
-    return fw ? `${fontFamily}-fw` : null;    
-  })), 
+    return fw ? `${fontFamily}-fw` : null;
+  })),
   icon: null,
   _icon: computed('icon', function() {
     let family = this.get('fontFamily');
@@ -24,14 +24,22 @@ export default Component.extend({
   color: null,
   border: false,
   circular: false,
+  padded: false,
   _circular: observer('circular', function() {
     let circular = this.get('circular');
+    let padded = this.get('padded');
     if(circular) {
+      if(Number(padded) !== padded) {
+        padded = padded ? 10 : 0;
+      }
       run.next( ()=> {
         let height = this.$().height();
-        this.set('_styleWidth', height + 'px');
+        this.set('_styleWidth', height + padded + 'px');
+        this.set('_styleHeight', height + padded + 'px');
+        this.set('_stylePadTop', padded/2 + 'px');
+        this.set('_stylePadLeft', (padded/2)*(2/3) + 'px');
         this.set('_styleBorderRadius', '50%');
-        this.set('_styleTextAlign', 'center'); 
+        this.set('_styleTextAlign', 'center');
       });
     }
   }),
@@ -53,11 +61,11 @@ export default Component.extend({
         console.log('ui-icon has styling options up to 10x, not as high as %s. If you need bigger sizing use an explicit pixel size(px) or state a percentage number rather than a multiplier', factor);
       }
       if(factor) {
-        this.set('_classSize', `scale-${factor}x`);        
+        this.set('_classSize', `scale-${factor}x`);
       }
     } // end scale factor
   }),
-  value: null, // values are passed by an action 
+  value: null, // values are passed by an action
   _value: computed('value', 'elementId', function() {
     let { value, elementId } = this.getProperties('value','elementId');
     return value !== null ? value : elementId;
@@ -65,8 +73,8 @@ export default Component.extend({
   click: function() {
     let value = this.get('_value');
     this.sendAction('action', value); // general action
-  }, 
-  
+  },
+
   tooltip: false,
   tooltipPlacement: 'top',
   tooltipDelay: 500,
@@ -76,7 +84,7 @@ export default Component.extend({
   _tooltipInit: Ember.on('didInsertElement', function() {
     let tooltip = this.get('tooltip');
     if(tooltip) {
-      let { 
+      let {
         tooltipPlacement: placement,
         tooltipDelay: delay,
         tooltipHtml: html,
@@ -98,26 +106,29 @@ export default Component.extend({
       });
     }
   }),
-  
+
   _style: Ember.computed('_styleWidth', '_styleFontSize', 'color', function() {
     const propMap = [
       {key: '_styleWidth', value: 'width'},
+      {key: '_styleHeight', value: 'height'},
       {key: 'color', value: 'color'},
       {key: 'background', value: 'background-color'},
       {key: '_styleBorderRadius', value: 'border-radius'},
       {key: '_styleTextAlign', value: 'text-align'},
+      {key: '_stylePadTop', value: 'padding-top'},
+      {key: '_stylePadLeft', value: 'padding-left'},
       {key: '_styleFontSize', value: 'font-size'}
     ];
-      
+
     let style = '';
-    
+
     propMap.forEach( (item) => {
       let styleProperty = this.get(item.key);
       if(styleProperty) {
         style = style + `;${item.value}:${styleProperty}`;
-      }      
+      }
     });
-    
+
     return Ember.String.htmlSafe(style);
   }),
 
