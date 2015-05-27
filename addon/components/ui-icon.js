@@ -48,6 +48,9 @@ export default Component.extend({
   _styleFontSize: null,
   _styleBorderRadius: null,
   _styleWidth: null,
+  _styleHeight: null,
+  _stylePadLeft: null,
+  _stylePadTop: null,
   _sizeObserver: observer('size', function() {
     let size = String(this.get('size'));
     if(size.substr(-2) === 'pt' || size.substr(-2) === 'em' || size.substr(-1) === '%') {
@@ -106,8 +109,7 @@ export default Component.extend({
       });
     }
   }),
-
-  _style: Ember.computed('_styleWidth', '_styleFontSize', 'color', function() {
+  _style: Ember.computed('_styleWidth', '_styleFontSize', '_styleTextAlign', '_stylePadTop', '_stylePadLeft', '_styleBorderRadius','_styleFontSize', 'color', function() {
     const propMap = [
       {key: '_styleWidth', value: 'width'},
       {key: '_styleHeight', value: 'height'},
@@ -119,9 +121,7 @@ export default Component.extend({
       {key: '_stylePadLeft', value: 'padding-left'},
       {key: '_styleFontSize', value: 'font-size'}
     ];
-
     let style = '';
-
     propMap.forEach( (item) => {
       let styleProperty = this.get(item.key);
       if(styleProperty) {
