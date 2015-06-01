@@ -15,8 +15,22 @@
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
+  "author": "Ken Snyder",
   "license": "MIT",
+    "files": [
+      "Brocfile.js",
+      "LICENSE.md",
+      "README.md",
+      "addon",
+      "app",
+      "bower.json",
+      "config",
+      "index.js",
+      "package.json",
+      "testem.json",
+      "vendor"
+    ],
+    "main": "index.js",
   "devDependencies": {
     "broccoli-asset-rev": "^2.0.2",
     "ember-cli": "0.2.6",
@@ -31,7 +45,8 @@
     "ember-data": "1.0.0-beta.18",
     "ember-disable-prototype-extensions": "^1.0.0",
     "ember-disable-proxy-controllers": "^1.0.0",
-    "ember-export-application-global": "^1.0.2"
+    "ember-export-application-global": "^1.0.2",
+    "ember-try": "0.0.4"
   },
   "keywords": [
     "ember-addon",
