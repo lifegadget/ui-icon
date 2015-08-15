@@ -1,8 +1,9 @@
 import Ember from 'ember';
 import layout from '../templates/components/ui-icon';
-const { Component, computed, observer, run } = Ember;
+const { keys, create } = Object; // jshint ignore:line
+const {computed, observer, $, A, run, on, typeOf, debug, defineProperty, get, set, inject, isEmpty} = Ember;  // jshint ignore:line
 
-export default Component.extend({
+export default Ember.Component.extend({
   layout: layout,
   tagName: 'i',
   classNames: ['ui-icon'],
@@ -132,9 +133,9 @@ export default Component.extend({
     return Ember.String.htmlSafe(style);
   }),
 
-  _init: Ember.on('didInsertElement', function() {
-    this._sizeObserver();
+  _init: Ember.on('willRender', function() {
     this._circular();
+    this._sizeObserver();
   })
 
 });
