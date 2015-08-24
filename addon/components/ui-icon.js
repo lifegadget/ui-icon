@@ -85,7 +85,7 @@ export default Ember.Component.extend({
   tooltipHtml: true,
   tooltipTrigger: 'hover',
   tooltipTemplate: '<div class="tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>',
-  _tooltipInit: Ember.on('didInsertElement', function() {
+  _tooltipInit: Ember.on('init', function() {
     let tooltip = this.get('tooltip');
     if(tooltip) {
       let {
@@ -94,7 +94,7 @@ export default Ember.Component.extend({
         tooltipHtml: html,
         tooltipTrigger: trigger,
         tooltipTemplate: template} = this.getProperties('tooltipPlacement', 'tooltipDelay','tooltipHtml','tooltipTrigger','tooltipTemplate');
-      Ember.run.next( () => {
+      Ember.run.schedule('afterRender', () => {
         try {
           this.$().tooltip({
             title: tooltip,

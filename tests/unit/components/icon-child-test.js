@@ -4,7 +4,7 @@ import {
 } from 'ember-qunit';
 
 moduleForComponent('icon-child', {
-  // Specify the other units that are required for this test
+  unit: true,
   // needs: ['component:foo', 'helper:bar']
 });
 
