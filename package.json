@@ -65,6 +65,6 @@
   },
   "ember-addon": {
     "configPath": "tests/dummy/config",
-    "demoURL": "http://development.ui-icon.divshot.io/"
+    "demoURL": "https://ui-icon.firebaseio.com/"
   }
 }

@@ -15,16 +15,14 @@ ember install ui-icon
 ````hbs
   Full Syntax
   {{ui-icon icon='facebook-square'}}
-  
+
   Shortened Syntax
   {{icon-facebook}}
 ````
 
 For more details on the syntax check out the interactive demo:
 
-> [ui-icon demo](http://development.ui-icon.divshot.io)
-
-
+> [ui-icon demo](https://ui-icon.firebaseio.com)
 
 
 ## Configuration ##
@@ -87,11 +85,11 @@ var app = new EmberApp({
 });
 ```
 
-> Note: if you have your own animations then you'll create a directory off of `/app` called "ui-icon" and then put your CSS files in there. 
-> 
+> Note: if you have your own animations then you'll create a directory off of `/app` called "ui-icon" and then put your CSS files in there.
+>
 
 ### Logs ###
-By default, this addon will briefly communicate its configuration setup when either `ember serve` or `ember build` is run. This is to remind you of 
+By default, this addon will briefly communicate its configuration setup when either `ember serve` or `ember build` is run. This is to remind you of
 the configuration but if this is unwanted verbosity you can turn it off with:
 
 ```javascript
@@ -107,7 +105,7 @@ var app = new EmberApp({
 ## Dependencies ##
 
 - FontAwesome - this is the fountain of icon-awesomeness
-- Annimate.css - a great set of libraries, this is not a strict dependency but you'd be crazy not to want it :) 
+- Annimate.css - a great set of libraries, this is not a strict dependency but you'd be crazy not to want it :)
 
 FontAwesome is the sole dependency for this repo to work but it was designed to play nicely with Twitter's Bootstrap as well.
 
@@ -120,7 +118,7 @@ This may very well work with older version of Ember and Ember-CLI but it was int
 
 ## Repo Contribution
 
-We're open to your creative suggestions but please move past the "idea" stage 
+We are open to your creative suggestions but please move past the "idea" stage
 and send us a PR so we can incorporate your ideas without killing ourselves. :)
 
 ## Licensing
