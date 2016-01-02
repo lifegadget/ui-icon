@@ -367,26 +367,37 @@
     <h3>Actions</h3>
     <div class="row">
         <p class="descriptive col-xs-12 col-sm-10 col-lg-8">
-            You can pick up actions on icon clicks, etc. and react to them as you like.
-            The action function will receive a single parameter with either value property
-            of the icon (if set) or fall back to the <strong>elementId</strong> if not.
+            Actions are now setup to use Ember's closure actions. When an
+            icon recieves a click event it will call the <code>onClick</code>
+            property off of <code>attrs</code>.
+
+            <br/>&nbsp;<br/>
+
+            If you prefer to use the older style of actions you may do this too,
+            there are examples of both below.
+
+            <br/>&nbsp;<br/>
+
+            In either case the event that is passed is a single hash/object which contains
+            the following properties: object (aka, "this"), event (click event), and style
+            (either "classic" or "closure")
         </p>
     </div>
 
     <div class="row">
         <div class="col-xs-1">
-            {{icon-info cursor=true muted=true size='3x' action='iconActionable'}}
+            {{icon-info cursor=true muted=true size='3x' onClick='iconActionable'}}
         </div>
         <div class="snippet col-xs-11">
-            \{{icon-info cursor=true muted=true size='3x' action='iconActionable'}}
+            \{{icon-info cursor=true muted=true size='3x' onClick='iconActionable'}}
         </div>
     </div>
     <div class="row">
         <div class="col-xs-1">
-            {{icon-info value='foobar' cursor=true muted=true size='3x' action='iconActionable' }}
+            {{icon-info value='foobar' cursor=true muted=true size='3x' onClick=(action 'iconActionable') }}
         </div>
         <div class="snippet col-xs-11">
-            \{{icon-info <strong>value='foobar'</strong> cursor=true muted=true size='3x' action='iconActionable' }}
+            \{{icon-info <strong>value='foobar'</strong> cursor=true muted=true size='3x' onClick=(action 'iconActionable') }}
         </div>
     </div>
 

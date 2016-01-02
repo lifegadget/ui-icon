@@ -74,9 +74,21 @@ export default Ember.Component.extend({
     let { value, elementId } = this.getProperties('value','elementId');
     return value !== null ? value : elementId;
   }),
-  click: function() {
-    let value = this.get('_value');
-    this.sendAction('action', value); // general action
+  click: function(evt) {
+    if(typeOf(this.attrs.onClick) === 'function') {
+      console.log('have an action attr');
+      this.attrs.onClick({
+        event: evt,
+        object: this,
+        style: 'closure'
+      });
+    } else {
+      this.sendAction('onClick', {
+        event: evt,
+        object: this,
+        style: 'classic'        
+      });
+    }
   },
 
   tooltip: false,
@@ -139,4 +151,3 @@ export default Ember.Component.extend({
   })
 
 });
-

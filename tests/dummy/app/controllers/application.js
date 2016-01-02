@@ -3,8 +3,8 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
 
   isRepressed: false,
-  toggledEnablement: false, 
-  
+  toggledEnablement: false,
+
   actions: {
     toggleRepression: function() {
       console.log('toggling');
@@ -14,8 +14,8 @@ export default Ember.Controller.extend({
       console.log('toggling');
       this.toggleProperty('toggledEnablement');
     },
-    iconActionable: function(item) {
-      window.alert('Icon clicked: ' + JSON.stringify(item));
+    iconActionable: function(i) {
+      window.alert(`Icon clicked using style ${i.style}`);
     }
   }
 
