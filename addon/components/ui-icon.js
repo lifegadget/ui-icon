@@ -76,7 +76,6 @@ export default Ember.Component.extend({
   }),
   click: function(evt) {
     if(typeOf(this.attrs.onClick) === 'function') {
-      console.log('have an action attr');
       this.attrs.onClick({
         event: evt,
         object: this,
@@ -86,7 +85,7 @@ export default Ember.Component.extend({
       this.sendAction('onClick', {
         event: evt,
         object: this,
-        style: 'classic'        
+        style: 'classic'
       });
     }
   },
