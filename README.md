@@ -23,16 +23,14 @@ For more details on the syntax check out the interactive demo:
 
 ## Configuration ##
 
-By default this addon will add all the font and CSS requirements for [**font-awesome**](http://fortawesome.github.io/Font-Awesome/) and it will minimally add the "attention-getters" CSS from [**animate.css**](http://daneden.github.io/animate.css/). You might say, "hey that's perfect" and of course that's what we *thought* you'd say so that is our default. You may, however, go whatever path you choose ... you reckless sailor.
-
+By default this addon will add all the font and CSS requirements for [**font-awesome**](http://fortawesome.github.io/Font-Awesome/). You might say, "hey that's perfect" and of course that's what we *thought* you'd say so that is our default. You may, however, go whatever path you choose ... you reckless sailor.
 
 ### FontAwesome ###
 
-If you've already loaded the CSS/Fonts for FontAwesome and you'd like us to stay out of that business, modify your `Brocfile` like so:
+If you've already loaded the CSS/Fonts for FontAwesome and you'd like us to stay out of that business, modify your `ember-cli-build.js` like so:
 
 ```javascript
-// in your path/to/app/Brocfile.js
-
+// path/to/app/ember-cli-build.js
 var app = new EmberApp({
   'ui-icon': {
     'fa': false

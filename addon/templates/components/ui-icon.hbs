@@ -1,1 +1,7 @@
-{{yield}}
+{{#if tooltip}}
+  {{#tooltip-on-parent
+    tooltipPlacement=tooltipPlacement
+  }}
+    {{tooltipContent}}
+  {{/tooltip-on-parent}}
+{{/if}}
