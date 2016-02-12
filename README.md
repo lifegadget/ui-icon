@@ -7,7 +7,7 @@
 ember install ui-icon
 ````
 
-> Note: this *will* install both [FontAwesome](http://fortawesome.github.io/Font-Awesome/) and [Animate.css](http://daneden.github.io/animate.css/) (see dependencies section) but you can configure how much you use them (including not at all)
+> Note: in versions 0.9.0+ we have moved a simpler "positional" syntax and therefore have removed the old "shortcuts" which were barely a shortcut at all anymore.
 
 ## Usage ##
 
