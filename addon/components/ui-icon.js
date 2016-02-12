@@ -3,7 +3,7 @@ import layout from '../templates/components/ui-icon';
 const { keys, create } = Object; // jshint ignore:line
 const {computed, observer, $, A, run, on, typeOf, debug, defineProperty, get, set, inject, isEmpty} = Ember;  // jshint ignore:line
 
-export default Ember.Component.extend({
+const icon = Ember.Component.extend({
   layout: layout,
   tagName: 'i',
   classNames: ['ui-icon'],
@@ -16,7 +16,6 @@ export default Ember.Component.extend({
     let fontFamily = this.get('fontFamily');
     return fw ? `${fontFamily}-fw` : null;
   })),
-  icon: null,
   _icon: computed('icon', function() {
     let family = this.get('fontFamily');
     let icon = this.get('icon');
@@ -150,3 +149,7 @@ export default Ember.Component.extend({
   })
 
 });
+icon.reopenClass({
+  positionalParams: ['icon']
+});
+export default icon;

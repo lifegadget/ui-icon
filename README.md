@@ -11,13 +11,9 @@ ember install ui-icon
 
 ## Usage ##
 
-
 ````hbs
   Full Syntax
-  {{ui-icon icon='facebook-square'}}
-
-  Shortened Syntax
-  {{icon-facebook}}
+  {{ui-icon 'facebook-square'}}
 ````
 
 For more details on the syntax check out the interactive demo:
@@ -52,48 +48,11 @@ Ok, the addon will still be inserting `fa` and `fa-[fontName]` classes based on 
 
 this should then output the classes: `glyph` and `glyph-file` instead of the typical `fa` and `fa-file`. Happy? If not then please turn yourself in ... you are officially miserable.
 
-### Animations ###
-
-As already mentioned the default is to include what **animate.css** calls *attention seekers*. These are:
-
-- bounce
-- flash
-- pulse
-- rubberBand
-- shake
-- swing
-- tada
-- wobble
-
-You can take what you're given and no one would fault you but if you're fiercely independant (as many folks who build *ambitious apps* are) you have options. These options take two different forms:
-
-- **Operation** - whatever you specify can be *added* to what we default to or **overwritten**
-- **Animations** - you can specify a list of animation to include ... these will be either:
-    - other animations from animate.css library
-    - your own animations
-
-Let's assume that you want to add two additional annimations: "lightSpeedIn" from annimate.css and "foobar" your own animation. Here's how you'd do it:
-
-```javascript
-// in your path/to/app/Brocfile.js
-
-var app = new EmberApp({
-  'ui-icon': {
-    'animateOperation': 'append',
-    'animate': ['lightspeed/lightSpeedIn.css','/foobar.css']
-  }
-});
-```
-
-> Note: if you have your own animations then you'll create a directory off of `/app` called "ui-icon" and then put your CSS files in there.
->
-
 ### Logs ###
-By default, this addon will briefly communicate its configuration setup when either `ember serve` or `ember build` is run. This is to remind you of
-the configuration but if this is unwanted verbosity you can turn it off with:
+By default, this addon will briefly communicate its configuration setup when either `ember serve` or `ember build` is run. This is to remind you of the configuration but if this is unwanted verbosity you can turn it off with:
 
-```javascript
-// in your path/to/app/Brocfile.js
+````javascript
+// in your path/to/app/ember.js
 
 var app = new EmberApp({
   'ui-icon': {
@@ -105,16 +64,13 @@ var app = new EmberApp({
 ## Dependencies ##
 
 - FontAwesome - this is the fountain of icon-awesomeness
-- Annimate.css - a great set of libraries, this is not a strict dependency but you'd be crazy not to want it :)
-
-FontAwesome is the sole dependency for this repo to work but it was designed to play nicely with Twitter's Bootstrap as well.
 
 ## Version Compatibility
 
 This may very well work with older version of Ember and Ember-CLI but it was intended for:
 
-- Ember 1.11.0+
-- Ember-CLI 0.2.2+
+- Ember 1.13.0+
+- Ember-CLI 1.13.0+
 
 ## Repo Contribution
 
