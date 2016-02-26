@@ -7,7 +7,7 @@ const icon = Ember.Component.extend({
   layout: layout,
   tagName: 'i',
   classNames: ['ui-icon'],
-  classNameBindings: ['fontFamily','_fw', '_icon', '_classSize', 'spin:fa-spin', 'pulse:fa-pulse', 'border:fa-border', 'muted', 'cursor'],
+  classNameBindings: ['fontFamily','_fw', '_icon', '_classSize', 'spin:fa-spin', 'pulse:fa-pulse', 'border:fa-border', 'muted', 'cursor','_mood'],
   attributeBindings: ['_style:style'],
   fontFamily: 'fa',
   fw: true,
@@ -88,6 +88,12 @@ const icon = Ember.Component.extend({
       });
     }
   },
+  mood: undefined,
+  _mood: computed('mood', function() {
+    const {mood} = this.getProperties('mood');
+
+    return mood ? `text-${mood}` : undefined;
+  }),
 
   tooltip: false,
   tooltipPlacement: 'top',

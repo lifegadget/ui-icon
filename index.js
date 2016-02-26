@@ -11,7 +11,7 @@ module.exports = {
     const bower = target.bowerDirectory;
 
     var o = merge(
-      { fa: true, animate: 'default', quiet: false, animateOperation: 'override' },
+      { fa: true, quiet: false },
       app.options['ui-icon']
     );
     // specific to this addon
@@ -26,10 +26,6 @@ module.exports = {
       target.import(bower + '/fontawesome/fonts/fontawesome-webfont.woff2',{destDir: 'fonts', overwrite: true});
       target.import(bower + '/fontawesome/fonts/FontAwesome.otf',{destDir: 'fonts', overwrite: true});
     }
-
-    // if(!o.quiet) {
-    //   console.log('ui-icon: %s, %s', faMessage, animateMessage);
-    // }
 
   }
 };

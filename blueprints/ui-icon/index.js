@@ -1,5 +1,5 @@
 module.exports = {
-	description: 'Installs FontAwesome and animate.css via bower',
+	description: 'Installs FontAwesome via Bower',
 
 	normalizeEntityName: function() {
 		// this prevents an error when the entityName is
