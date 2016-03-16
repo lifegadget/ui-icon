@@ -1,5 +1,16 @@
-{{!-- {{#if tooltip}}
-  {{#tooltip-on-parent}}
-    {{tooltipContent}}
-  {{/tooltip-on-parent}}
-{{/if}} --}}
+{{#if (or padding height)}}
+  <span class="icon-padding" style={{stylist}}>
+    <i
+      id={{elementId}}
+      class="ui-icon {{fontFamily}}{{_fw}}{{_icon}}{{_mood}}{{_pulse}}{{_spin}}{{_pointer}}"
+      onclick={{action 'onClick'}}
+    ></i>
+  </span>
+{{else}}
+  <i
+    id={{elementId}}
+    style={{stylist}}
+    class="ui-icon {{fontFamily}}{{_fw}}{{_icon}}{{_mood}}{{_pulse}}{{_spin}}{{_pointer}}"
+    onclick={{action 'onClick'}}
+  ></i>
+{{/if}}

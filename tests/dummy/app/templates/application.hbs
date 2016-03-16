@@ -10,14 +10,14 @@
     </div>
 
     <div class="row">
-        <div class="col-xs-1">
-            {{ui-icon 'smile-o'}}
-            {{ui-icon 'meh-o'}}
+        <div class="col-xs-2">
+            {{ui-icon 'smile-o'}}<br>
+            {{ui-icon 'meh-o'}}<br>
             {{ui-icon 'frown-o'}}
         </div>
-        <div class="snippet col-xs-11">
-            \{{ui-icon 'smile-o'}}
-            \{{ui-icon 'meh-o'}}
+        <div class="snippet col-xs-10">
+            \{{ui-icon 'smile-o'}}<br>
+            \{{ui-icon 'meh-o'}}<br>
             \{{ui-icon 'frown-o'}}
         </div>
     </div>
@@ -30,60 +30,76 @@
     </div>
 
     <div class="row">
-        <div class="col-xs-1">
+        <div class="col-xs-2">
             {{ui-icon 'smile-o'}}
         </div>
-        <div class="snippet col-xs-11">
+        <div class="snippet col-xs-10">
             \{{ui-icon 'smile-o'}}
         </div>
     </div>
     <div class="row">
-        <div class="col-xs-1">
-            {{ui-icon 'smile-o' size='lg'}}
+        <div class="col-xs-2">
+            {{ui-icon 'smile-o' size='36pt'}}
         </div>
-        <div class="snippet col-xs-11">
-            \{{ui-icon 'smile-o' size='lg'}}
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-xs-1">
-            {{ui-icon 'smile-o' size='18pt'}}
-        </div>
-        <div class="snippet col-xs-11">
-            \{{ui-icon 'smile-o' size='18pt'}}
+        <div class="snippet col-xs-10">
+            \{{ui-icon 'smile-o' size='36pt'}}
         </div>
     </div>
     <div class="row">
-        <div class="col-xs-1">
+        <div class="col-xs-2">
             {{ui-icon 'smile-o' size='3x' }}
         </div>
-        <div class="snippet col-xs-11">
+        <div class="snippet col-xs-10">
             \{{ui-icon 'smile-o' size='3x'}}
         </div>
     </div>
     <div class="row">
-        <div class="col-xs-1">
+        <div class="col-xs-2">
             {{ui-icon 'smile-o' size='5x'}}
         </div>
-        <div class="snippet col-xs-11">
+        <div class="snippet col-xs-10">
             \{{ui-icon 'smile-o' size='5x'}}
+        </div>
+    </div>
+
+    <h3>Classy Annimation</h3>
+    <div class="row">
+        <p class="descriptive col-xs-12">
+            You can gain easy access to font-families animation classes
+        </p>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-2">
+            {{ui-icon 'smile-o' spin=true}}
+        </div>
+        <div class="snippet col-xs-10">
+            \{{ui-icon 'smile-o' spin=true}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-2">
+            {{ui-icon 'spinner' pulse=true}}
+        </div>
+        <div class="snippet col-xs-10">
+            \{{ui-icon 'spinner' pulse=true}}
         </div>
     </div>
 
     <h3>Mood</h3>
     <div class="row">
-        <p class="descriptive col-xs-12 col-sm-8 col-lg-6">
+        <p class="descriptive col-xs-12">
             Setting the mood property allows you leverage your color palate set with Bootstrap
         </p>
     </div>
 
     <div class="row">
-        <div class="col-xs-1">
-            {{ui-icon 'smile-o' mood='success'}}
-            {{ui-icon 'smile-o' mood='warning'}}
+        <div class="col-xs-2">
+            {{ui-icon 'smile-o' mood='success'}}<br>
+            {{ui-icon 'smile-o' mood='warning'}}<br>
             {{ui-icon 'smile-o' mood='danger'}}
         </div>
-        <div class="snippet col-xs-11">
+        <div class="snippet col-xs-10">
           \{{ui-icon 'smile-o' mood='success'}}<br>
           \{{ui-icon 'smile-o' mood='warning'}}<br>
           \{{ui-icon 'smile-o' mood='danger'}}
@@ -92,140 +108,177 @@
 
     <h3>Styling</h3>
     <div class="row">
-        <p class="descriptive col-xs-12 col-sm-8 col-lg-6">
-            There are a number of helpful ways you can style icons ... colors, spins, etc.
+        <p class="descriptive col-xs-12 ">
+            There are several "style" properties which are proxied through for you ...
         </p>
     </div>
 
     <div class="row">
-        <div class="col-xs-1">
-            {{ui-icon 'smile-o' size='lg'}} {{ui-icon 'smile-o' muted=true size='lg'}}
+        <div class="col-xs-2">
+            {{ui-icon 'smile-o' color='red' background='lightgrey'}}
         </div>
-        <div class="snippet col-xs-11">
-            \{{ui-icon 'smile-o' <strong>muted=true</strong> size='lg'}} - muting drops opacity to give a muted look
+        <div class="snippet col-xs-10">
+            \{{ui-icon 'smile-o' color='red' background='lightgrey'}}
+            <br>
+            <div class="desc">
+              foreground and background colors are proxied
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-2">
+            {{ui-icon 'smile-o' border='2px solid lightgrey'}}
+        </div>
+        <div class="snippet col-xs-10">
+            \{{ui-icon 'smile-o' border='2px solid lightgrey'}}
+            <br>
+            <div class="desc">
+              you can proxy <i>border</i> CSS property
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-2">
+        {{ui-icon 'smile-o' }}  <br>
+        {{ui-icon 'smile-o' muted=true}} <br>
+        {{ui-icon 'smile-o' opacity=0.2}}
+      </div>
+      <div class="snippet col-xs-10">
+        <div class="code">
+          \{{ui-icon 'smile-o'}} <br>
+          \{{ui-icon 'smile-o' <strong>muted=true</strong>}} <br>
+          \{{ui-icon 'smile-o' <strong>opacity=0.2</strong>}}
+        </div>
+          <div class="desc">
+            - <b>muting</b> drops opacity to (0.5) give a muted look <br>
+            - you can also just set <b>opacity</b> directly and it will proxy through
+          </div>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-2">
+          {{ui-icon 'smile-o'}}
+          <br>
+          {{ui-icon 'smile-o' pointer=true}}
+          <br>
+          {{ui-icon 'smile-o' cursor='crosshair'}}
+        </div>
+        <div class="snippet col-xs-10">
+          <div class="coding">
+            \{{ui-icon 'smile-o'}} <br>
+            \{{ui-icon 'smile-o' <strong>pointer=true</strong>}} <br>
+            \{{ui-icon 'smile-o' <strong>cursor='crosshair'</strong>}}
+          </div>
+          <p class="desc">
+            - setting <em>cursor</em> is a straight style pass-through <br>
+            - setting <em>pointer</em> to a true value results in the application of the 'pointer' class which has built in styling that changes when moving from normal to hover state.
+          </p>
         </div>
     </div>
     <div class="row">
-        <div class="col-xs-1">
-            {{ui-icon 'smile-o' size='lg' cursor=true}} {{ui-icon 'smile-o' muted=true size='lg' cursor=true}}
+        <div class="col-xs-2">
+            {{ui-icon 'smile-o' muted=true color='purple' pointer=true size='2x'}}
+            {{ui-icon 'smile-o' muted=true color='green' pointer=true size='2x'}}
         </div>
-        <div class="snippet col-xs-11">
-            \{{ui-icon 'smile-o' <strong>cursor=true</strong> size='lg'}} - setting the cursor effects <em>cursor</em> and <em>hover</em>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-xs-1">
-            {{ui-icon 'smile-o' size='lg' muted=true color='purple' cursor=true}} {{ui-icon 'smile-o' muted=true color='green' size='lg' cursor=true}}
-        </div>
-        <div class="snippet col-xs-11">
-            \{{ui-icon 'smile-o' size='lg' muted=true color='purple' cursor=true}} <br/>
-            muted and cursor effect <em>opacity</em> not <em>color</em>, setting colors explicitly does not interfere with "muted" or "cursor" effects
+        <div class="snippet col-xs-10 desc">
+            \{{ui-icon 'smile-o' muted=true color='purple' pointer=true size='2x'}} <br/>
+            \{{ui-icon 'smile-o' muted=true color='green' pointer=true size='2x'}}
+            <div class="desc">
+              muted and cursor effect <em>opacity</em> not <em>color</em>, so setting colors explicitly does not interfere with "muted" or "cursor" effects at all
+            </div>
         </div>
     </div>
+
+
+
     <div class="row">
-        <div class="col-xs-1">
-            {{ui-icon 'smile-o' color='red' size='3x'}}
+        <div class="col-xs-2">
+          {{ui-icon 'check-square-o'
+          padding='15px'
+          borderRadius='50%'
+          background='lightgrey'
+          size='2x'
+        }}
         </div>
-        <div class="snippet col-xs-11">
-            \{{ui-icon 'smile-o' color='red' size='3x'}}
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-xs-1">
-            {{ui-icon 'smile-o' color='red' background='lightgrey' size='3x'}}
-        </div>
-        <div class="snippet col-xs-11">
-            \{{ui-icon 'smile-o' color='red' background='lightgrey' size='3x'}}
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-xs-1">
-            {{ui-icon 'smile-o' circular=true color='red' background='lightgrey' size='3x'}}
-        </div>
-        <div class="snippet col-xs-11">
-            \{{ui-icon 'smile-o' circular=true color='red' background='lightgrey' size='3x'}}
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-xs-1">
-            {{ui-icon 'smile-o' circular=true spin=true background='lightgrey' size='3x'}}
-        </div>
-        <div class="snippet col-xs-11">
-            \{{ui-icon 'smile-o' circular=true spin=true background='lightgrey' size='3x'}}
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-xs-1">
-            {{ui-icon 'check-square-o' circular=true background='lightgrey' size='3x'}}
-        </div>
-        <div class="snippet col-xs-11">
-            \{{ui-icon 'check-square-o' circular=true background='lightgrey' size='3x'}}
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-xs-1">
-            {{ui-icon 'check-square-o' circular=true padded=20 background='lightgrey' size='3x'}}
-        </div>
-        <div class="snippet col-xs-11">
-            \{{ui-icon 'check-square-o' circular=true padded=20 background='lightgrey' size='3x'}}
+        <div class="snippet col-xs-4">
+<pre><code>\{{ui-icon 'check-square-o'
+  padding='15px'
+  borderRadius='50%'
+  background='lightgrey'
+  size='2x'
+}}</code></pre>
+      </div>
+      <div class="col-xs-6">
             <span class="comment">
-              <p>
-              <em>Padding</em> adds some room for square icons in a circular container. Setting to true adds 10px but you if you specify a numeric quantity that will be used instead.
+              <p class='desc'>
+                Setting <em>padding</em> doesn't just add the CSS padding style (as that would have no effect on the icon itself) but instead puts the icon inside a span where the containing span has the padding supplied.
               </p>
             </span>
           </div>
     </div>
+
     <div class="row">
-        <div class="col-xs-1">
-            {{ui-icon 'spinner' pulse=true size='3x'}}
+        <div class="col-xs-2">
+          {{ui-icon 'check-square-o'
+            width='4rem'
+            height='4rem'
+            borderRadius='50%'
+            background='lightgrey'
+            size='2x'
+          }}
         </div>
-        <div class="snippet col-xs-11">
-            \{{ui-icon 'spinner' pulse=true size='3x'}}
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-xs-1">
-            {{ui-icon 'quote-left' border=true size='3x' fw=false}}
-        </div>
-        <div class="snippet col-xs-11">
-            \{{ui-icon 'quote-left' border=true size='3x' fw=false}}
-        </div>
+        <div class="snippet col-xs-4">
+<pre><code>\{{ui-icon 'check-square-o'
+  width='4rem'
+  height='4rem'
+  borderRadius='50%'
+  background='lightgrey'
+  size='2x'
+}}</code></pre>
+      </div>
+      <div class="col-xs-6">
+            <span class="comment">
+              <p class='desc'>
+                Whenever you explicitly set 'height' on the component it also wraps up the icon into a span in the same manner as the previous example.
+              </p>
+            </span>
+          </div>
     </div>
 
 
 
     <h3>Tooltips</h3>
     <div class="row">
-        <p class="descriptive col-xs-12 col-sm-8 col-lg-6">
+        <p class="descriptive col-xs-12">
             TOOLTIPS ARE CURRENTLY UNAVAILABLE, THEY WILL COME BACK SOON
         </p>
     </div>
 
-    <div class="row">
-        <div class="col-xs-1">
+    {{!-- <div class="row">
+        <div class="col-xs-2">
             {{ui-icon 'comments' tooltipContent='hello world' size='3x'}}
         </div>
-        <div class="snippet col-xs-11">
+        <div class="snippet col-xs-10">
             \{{ui-icon 'comments' tooltipContent='hello world' size='3x'}}
         </div>
     </div>
     <div class="row">
-        <div class="col-xs-1">
+        <div class="col-xs-2">
             {{ui-icon 'comments' tooltipContent='hello lefty' tooltipPlacement='left' size='3x'}}
         </div>
-        <div class="snippet col-xs-11">
+        <div class="snippet col-xs-10">
             \{{ui-icon 'comments' tooltipContent='hello lefty' tooltipPlacement='left' size='3x'}}
         </div>
-    </div>
+    </div> --}}
 
     <h3>Actions</h3>
     <div class="row">
-        <p class="descriptive col-xs-12 col-sm-10 col-lg-8">
+        <p class="col-xs-12 desc">
             Actions are now setup to use Ember's closure actions. When an
             icon recieves a click event it will call the <code>onClick</code>
             property off of <code>attrs</code>.
-
-            <br/>&nbsp;<br/>
 
             If you prefer to use the older style of actions you may do this too,
             there are examples of both below.
@@ -239,18 +292,18 @@
     </div>
 
     <div class="row">
-        <div class="col-xs-1">
+        <div class="col-xs-2">
             {{ui-icon 'info-circle' cursor=true muted=true size='3x' onClick='iconActionable'}}
         </div>
-        <div class="snippet col-xs-11">
+        <div class="snippet col-xs-10">
             \{{ui-icon 'info-circle' cursor=true muted=true size='3x' onClick='iconActionable'}}
         </div>
     </div>
     <div class="row">
-        <div class="col-xs-1">
+        <div class="col-xs-2">
             {{ui-icon 'info-circle' value='foobar' cursor=true muted=true size='3x' onClick=(action 'iconActionable') }}
         </div>
-        <div class="snippet col-xs-11">
+        <div class="snippet col-xs-10">
             \{{ui-icon 'info-circle' <strong>value='foobar'</strong> cursor=true muted=true size='3x' onClick=(action 'iconActionable') }}
         </div>
     </div>

@@ -1,7 +1,18 @@
 html, body {
 	font-family: Verdana, Geneva, sans-serif;
 	margin: 20px;
+	font-size: 24px;
 }
+
+.desc {
+  	font-family: Verdana, Geneva, sans-serif;
+    font-size: 18px;
+    padding-top: 15px;
+}
+.code {
+  font-size: 24px;
+}
+
 h1 {
 	font-size: 3rem;
 	margin-bottom: .25rem;
@@ -24,6 +35,10 @@ h2 {
 	color: darkgrey;
 	margin-top: .5rem;
 	margin-bottom: 3rem;
+}
+
+h3 {
+  font-size: 1.25em;
 }
 
 .demo-table td {

@@ -1,45 +1,28 @@
 /* ui-icon CSS */
+.icon-padding {
+  display: inline-flex;
+  align-items: baseline;
+  justify-content: center;
+}
 
-.ui-icon.scale-2x {
-    font-size: 2em;
-}
-.ui-icon.scale-3x {
-    font-size: 3em;
-}
-.ui-icon.scale-4x {
-    font-size: 4em;
-}
-.ui-icon.scale-5x {
-    font-size: 5em;
-}
-.ui-icon.scale-6x {
-    font-size: 6em;
-}
-.ui-icon.scale-7x {
-    font-size: 7em;
-}
-.ui-icon.scale-8x {
-    font-size: 8em;
-}
-.ui-icon.scale-9x {
-    font-size: 9em;
-}
-.ui-icon.scale-10x {
-    font-size: 10em;
+.ui-icon {
+  display: inline-flex;
+  align-self: center;
+  vertical-align: middle;
 }
 
 // default hover effects
-.ui-icon.cursor {
+.ui-icon.pointer {
     opacity: .9;
 }
-.ui-icon.cursor {
+.ui-icon.pointer {
     cursor: pointer;
 }
 .ui-icon.muted {
 /*    color: #9d9d9d;*/
     opacity: .5;
 }
-.ui-icon.cursor:hover {
+.ui-icon.pointer:hover {
     color: #000;
     opacity: 1;
     transition-duration: .25s;
