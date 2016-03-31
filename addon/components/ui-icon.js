@@ -69,12 +69,14 @@ const icon = Ember.Component.extend(SharedStylist, {
         this.attrs.onClick({
           event: evt,
           object: this,
+          value: get(this, 'value'),
           style: 'closure'
         });
       } else {
         this.sendAction('onClick', {
           event: evt,
           object: this,
+          value: get(this, 'value'),
           style: 'classic'
         });
       }
