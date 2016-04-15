@@ -10,6 +10,22 @@ const icon = Ember.Component.extend(SharedStylist, {
 
   styleBindings: ['fontSize', 'color', 'width', 'height', 'padding','borderRadius', 'background', 'fontWeight', 'border', 'opacity', 'cursor'],
   fontFamily: 'fa',
+  role: undefined,
+  _role: computed('role', function() {
+    const {role, pointer, cursor} = this.getProperties('role', 'pointer', 'cursor');
+
+    if (role) {
+      return role;
+    } else {
+      return pointer || cursor === 'pointer' ? 'link' : 'img';
+    }
+  }),
+  labeledBy: undefined,
+  _labeledBy: computed('labeledBy', function() {
+    const {labeledBy, icon} = this.getProperties('labeledBy', 'icon');
+
+    return labeledBy ? labeledBy : icon.split('-')[0];
+  }),
   fw: true,
   _fw: computed('fw', function() {
     let fw = this.get('fw');

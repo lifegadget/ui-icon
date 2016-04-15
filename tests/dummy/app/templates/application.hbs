@@ -308,4 +308,36 @@
         </div>
     </div>
 
+
+    <h3>Aria Support</h3>
+    <div class="row">
+        <p class="col-xs-12 desc">
+          Aria support is provided for the "role", "labeledBy", and "describedBy" properties.
+        </p>
+        <p class="col-xs-12 desc">
+          By default role will be set to "img" for you unless you state that you want a pointer cursor in which case it defaults to "link". You can, however, set it to anything you like by changing the <b>role</b> property on this component.
+        </p>
+        <p class="col-xs-12 desc">
+          The "labeledBy" defaults to the name of the icon -- specifically the first part of the dasherized name -- but you can override that to whatever you like. The "describedBy" property is not set by default but you can see in this example how we've set it (view source).
+        </p>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-2">
+            {{ui-icon 'eye' labeledBy='my label' describedBy='my description' size='3rem'}}
+        </div>
+        <div class="snippet col-xs-10">
+            \{{ui-icon 'eye' labeledBy='my label' describedBy='my description' size='3rem'}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-2">
+            {{ui-icon 'eye' pointer=true size='3rem'}}
+        </div>
+        <div class="snippet col-xs-10">
+          \{{ui-icon 'eye' pointer=true size='3rem'}}
+
+        </div>
+    </div>
+
 </div>
