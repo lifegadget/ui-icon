@@ -34,7 +34,9 @@ before_install:
   - "npm config set progress false"
   - "npm install -g npm@^3"
   - sudo apt-get update -qq
-  - sudo apt-get install -y google-chrome-stable
+  - sudo apt-get install sudo -y libappindicator1 fonts-liberation
+  - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+  - sudo dpkg -i google-chrome*.deb
 
 install:
   - npm install -g bower
