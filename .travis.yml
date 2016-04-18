@@ -4,6 +4,7 @@ node_js:
   - "4.4.3"
 
 sudo: true
+dist: trusty
 
 addons:
   apt:
@@ -34,9 +35,6 @@ before_install:
   - "npm config set progress false"
   - "npm install -g npm@^3"
   - sudo apt-get update -qq
-  - sudo apt-get install sudo -y lsb-base=4.1 libstdc++=4.8.2-dev
-  - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-  - sudo dpkg -i google-chrome*.deb
 
 install:
   - npm install -g bower
