@@ -24,7 +24,7 @@ const icon = Ember.Component.extend(SharedStylist, {
   _labeledBy: computed('labeledBy', function() {
     const {labeledBy, icon} = this.getProperties('labeledBy', 'icon');
 
-    return labeledBy ? labeledBy : icon.split('-')[0];
+    return labeledBy ? labeledBy : (icon || String()).split('-')[0];
   }),
   fw: true,
   _fw: computed('fw', function() {
