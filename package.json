@@ -1,6 +1,6 @@
 {
   "name": "ui-icon",
-  "version": "0.10.4",
+  "version": "0.10.5",
   "description": "Add FontAwesome icons to your Ember app with flare.",
   "directories": {
     "doc": "doc",
@@ -62,7 +62,6 @@
   "dependencies": {
     "ember-cli-stylist": "0.4.4",
     "ember-truth-helpers": "1.2.0",
-    "ember-tooltips": "ksnyde/ember-tooltips",
     "ember-cli-babel": "^5.1.6",
     "ember-cli-htmlbars": "^1.0.1",
     "merge": "^1.2.0"
