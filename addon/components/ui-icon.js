@@ -8,7 +8,7 @@ const icon = Ember.Component.extend(SharedStylist, {
   layout: layout,
   tagName: '',
   init() {
-    this._super(...arguents);
+    this._super(...arguments);
     if(!this.get('elementId')) {
       this.set('elementId', 'ember-' + Math.random().toString(36).substr(2, 9));
     }
