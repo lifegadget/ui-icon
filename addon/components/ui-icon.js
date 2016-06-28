@@ -7,6 +7,12 @@ const {computed, observer, $, A, run, on, typeOf, debug, defineProperty, get, se
 const icon = Ember.Component.extend(SharedStylist, {
   layout: layout,
   tagName: '',
+  init() {
+    this._super(...arguents);
+    if(!this.get('elementId')) {
+      this.set('elementId', 'ember-' + Math.random().toString(36).substr(2, 9));
+    }
+  },
 
   styleBindings: ['fontSize', 'color', 'width', 'height', 'padding','borderRadius', 'background', 'fontWeight', 'border', 'opacity', 'cursor'],
   fontFamily: 'fa',
