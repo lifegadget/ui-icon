@@ -18,7 +18,7 @@ ember install ui-icon
 
 For more details on the syntax check out the interactive demo:
 
-> [ui-icon demo](https://ui-icon.firebaseio.com)
+> [ui-icon demo](https://ui-icon.firebaseapp.com/)
 
 
 ## Configuration ##
