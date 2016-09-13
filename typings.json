@@ -1,0 +1,5 @@
+{
+  "globalDevDependencies": {
+    "chalk": "registry:dt/chalk#0.4.0+20160317120654"
+  }
+}

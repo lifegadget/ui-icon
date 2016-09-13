@@ -27,5 +27,11 @@ module.exports = {
       target.import(bower + '/fontawesome/fonts/FontAwesome.otf',{destDir: 'fonts', overwrite: true});
     }
 
+    if (app.registry.availablePlugins['ember-cli-sass']) {
+      
+    } else {
+
+    }
+
   }
 };
