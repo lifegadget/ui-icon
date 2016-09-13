@@ -4,14 +4,10 @@
     "ember": "2.8.0",
     "ember-cli-shims": "0.1.1",
     "ember-cli-test-loader": "0.2.2",
-    "ember-load-initializers": "0.1.7",
-    "ember-qunit": "0.4.16",
-    "ember-qunit-notifications": "0.1.0",
     "jquery": "1.11.3",
     "fontawesome": "~4.6.3"
   },
   "devDependencies": {
-    "bootstrap": "~3.3.6",
-    "ember-resolver": "~0.1.18"
+    "bootstrap": "~3.3.6"
   }
 }
