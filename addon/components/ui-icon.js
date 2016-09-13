@@ -1,7 +1,7 @@
 import Ember from 'ember';
 import layout from '../templates/components/ui-icon';
 import SharedStylist from 'ember-cli-stylist/mixins/shared-stylist';
-import { v1 } from 'ember-uuid';
+import { v4 } from 'ember-uuid';
 const { keys, create } = Object; // jshint ignore:line
 const {computed, observer, $, A, run, on, typeOf, debug, defineProperty, get, set, inject, isEmpty} = Ember;  // jshint ignore:line
 
@@ -10,7 +10,7 @@ const icon = Ember.Component.extend(SharedStylist, {
   tagName: '',
   init() {
     this._super(...arguments);
-    this.set('id', v1());
+    this.set('id', v4());
   },
 
   styleBindings: ['fontSize', 'color', 'width', 'height', 'padding','borderRadius', 'background', 'fontWeight', 'border', 'opacity', 'cursor'],
