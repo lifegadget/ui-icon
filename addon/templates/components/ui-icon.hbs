@@ -1,7 +1,7 @@
 {{#if (or padding height)}}
   <span class="icon-padding" style={{stylist}}>
     <i
-      id={{elementId}}
+      id={{id}}
       class="ui-icon {{class}} {{fontFamily}}{{_fw}}{{_icon}}{{_mood}}{{_pulse}}{{_spin}}{{_pointer}}"
       role={{_role}}
       aria-labeledBy={{_labeledBy}}
@@ -11,7 +11,7 @@
   </span>
 {{else}}
   <i
-    id={{elementId}}
+    id={{id}}
     role={{_role}}
     aria-labeledBy={{_labeledBy}}
     aria-describedBy={{describedBy}}
