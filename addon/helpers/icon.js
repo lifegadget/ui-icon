@@ -25,6 +25,7 @@ export function icon(params, hash = {}) {
 
     return Object.keys(params)
       .filter(i => styleBindings.includes(i))
+      .filter(i => params[i])
       .map(i => {
         const name = dasherize(i);
         const value = params[i];
@@ -38,6 +39,7 @@ export function icon(params, hash = {}) {
     opacity: hash.muted ? 0.5 : null
   }));
   const labeledBy = hash.labledBy ? hash.labeledBy : (icon || String()).split('-')[0];
+  const describedBy = hash.describedBy ? hash.describedBy : '';
   const passedInClass = hash.class ? ` ${hash.class}` : '';
   return htmlSafe(
     `<i
@@ -45,8 +47,8 @@ export function icon(params, hash = {}) {
       class="ui-icon ${family} ${family}-${icon}${fwClass}${passedInClass}"
       style="${style}"
       role="${role}"
-      aria-labeledBy="${labeledBy}"
-      aria-describedBy="${hash.describedBy}"
+      aria-labeledBy=${labeledBy}
+      aria-describedBy=${describedBy}
     ></i>`);
 }
 
