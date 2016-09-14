@@ -54,7 +54,8 @@
     "ember-load-initializers": "^0.5.1",
     "ember-resolver": "^2.1.0",
     "ember-uuid": "1.0.0",
-    "loader.js": "^4.0.1"
+    "loader.js": "^4.0.1",
+    "phantomjs": "^2.1.7"
   },
   "keywords": [
     "ember-addon",
