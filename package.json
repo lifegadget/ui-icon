@@ -64,7 +64,7 @@
     "fontawesome"
   ],
   "dependencies": {
-    "ember-cli-stylist": "0.4.6",
+    "ember-cli-stylist": "0.4.8",
     "ember-truth-helpers": "1.2.0",
     "ember-cli-babel": "^5.1.6",
     "ember-cli-htmlbars": "^1.0.3",

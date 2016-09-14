@@ -1,7 +1,47 @@
 import Ember from 'ember';
+import { v4 } from 'ember-uuid';
+const htmlSafe = Ember.String.htmlSafe;
 
-export function icon(params/*, hash*/) {
-  return params;
+export function icon(params, hash) {
+  const id = v4();
+  const family = hash.family || 'fa';
+  const fw = hash.fw || true;
+  const fwClass = fw ? ` ${family}-fw` : '';
+  const icon = params[0];
+  const { pointer, cursor } = hash;
+  const role = hash.role ? hash.role : pointer || cursor === 'pointer' ? 'link' : 'img';
+  const stylist = (params) => {
+    const styleBindings = Ember.A([
+      'fontSize', 'color', 'width', 'height', 'padding',
+      'borderRadius', 'background', 'fontWeight', 'border',
+      'opacity', 'cursor'
+    ]);
+    const dasherize = thingy => {
+      return thingy ? Ember.String.dasherize(thingy) : thingy;
+    };
+    Object.keys(params).filter(i => console.log(i));
+    return Object.keys(params)
+      .filter(i => styleBindings.includes(i))
+      .map(i => {
+        const name = dasherize(i);
+        const value = params[i];
+        return value ? `${name}: ${value}` : '';
+      })
+      .join('; ');
+  };
+  const style = stylist(Ember.assign({}, hash, {
+    fontSize: hash.size,
+    cursor: pointer ? 'pointer' : null,
+    opacity: hash.muted ? 0.5 : null
+  }));
+  const passedInClass = hash.class ? ` ${hash.class}` : '';
+  console.log('style:', style);
+  return htmlSafe(
+    `<i
+      id=${id}
+      class="ui-icon ${family} ${family}-${icon}${fwClass}${passedInClass}"
+      style="${style}"
+    ></i>`);
 }
 
 export default Ember.Helper.helper(icon);
