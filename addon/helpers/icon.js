@@ -22,7 +22,7 @@ export function icon(params, hash = {}) {
     const dasherize = thingy => {
       return thingy ? Ember.String.dasherize(thingy) : thingy;
     };
-    Object.keys(params).filter(i => console.log(i));
+
     return Object.keys(params)
       .filter(i => styleBindings.includes(i))
       .map(i => {
