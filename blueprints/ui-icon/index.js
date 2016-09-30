@@ -9,7 +9,8 @@ module.exports = {
 
 	afterInstall() {
     return this.addBowerPackagesToProject([
-      { name: 'fontawesome', target: '^4.6.3'}
+      { name: 'fontawesome', target: '^4.6.3' },
+      { name: 'ember-uuid', target: '1.0.0' }
     ]);
 	}
 };
