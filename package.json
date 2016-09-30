@@ -53,7 +53,6 @@
     "ember-export-application-global": "^1.0.5",
     "ember-load-initializers": "^0.5.1",
     "ember-resolver": "^2.1.0",
-    "ember-uuid": "1.0.0",
     "loader.js": "^4.0.1",
     "phantomjs": "^2.1.7"
   },
@@ -64,6 +63,7 @@
     "fontawesome"
   ],
   "dependencies": {
+    "ember-uuid": "1.0.0",
     "ember-cli-stylist": "0.4.11",
     "ember-truth-helpers": "1.2.0",
     "ember-cli-babel": "^5.1.6",
