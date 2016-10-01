@@ -9,10 +9,12 @@ module.exports = {
 		this._super.included(app);
     const target = (parentAddon || app);
     const bower = target.bowerDirectory;
+    const options = typeof app.options === 'object' ? app.options : {};
+    const addonConfig = options['ui-icon'] || {};
 
     var o = merge(
       { fa: true, quiet: false },
-      app.options['ui-icon']
+      addonConfig
     );
     // specific to this addon
     app.import('vendor/ui-icon/ui-icon.css');
@@ -28,7 +30,7 @@ module.exports = {
     }
 
     if (app.registry.availablePlugins['ember-cli-sass']) {
-      
+
     } else {
 
     }
