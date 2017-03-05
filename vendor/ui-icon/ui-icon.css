@@ -7,8 +7,14 @@
 
 .ui-icon {
   display: inline-flex;
-  align-self: center;
+  align-items: center;
+  justify-content: center;
   vertical-align: middle;
+}
+
+.ui-icon i {
+    display: flex;
+    inline-flex: 0;
 }
 
 // default hover effects
