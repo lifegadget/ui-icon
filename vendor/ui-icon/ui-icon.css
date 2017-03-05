@@ -9,15 +9,10 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  vertical-align: middle;
+  align-self: center;
+  align-content: center;
 }
 
-.ui-icon i {
-    display: flex;
-    inline-flex: 0;
-}
-
-// default hover effects
 .ui-icon.pointer {
     opacity: .9;
 }
