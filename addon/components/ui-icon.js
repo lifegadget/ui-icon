@@ -86,20 +86,24 @@ const icon = Ember.Component.extend(SharedStylist, {
 
   actions: {
     onClick: function(evt) {
-      if(typeOf(this.attrs.onClick) === 'function') {
-        this.attrs.onClick({
-          event: evt,
-          object: this,
-          value: get(this, 'value'),
-          style: 'closure'
-        });
-      } else {
-        this.sendAction('onClick', {
-          event: evt,
-          object: this,
-          value: get(this, 'value'),
-          style: 'classic'
-        });
+      if(!this.get('disabled')) {
+        
+        if(typeOf(this.attrs.onClick) === 'function') {
+          this.attrs.onClick({
+            event: evt,
+            object: this,
+            value: get(this, 'value'),
+            style: 'closure'
+          });
+        } else {
+          this.sendAction('onClick', {
+            event: evt,
+            object: this,
+            value: get(this, 'value'),
+            style: 'classic'
+          });
+        }
+
       }
     },
   }
